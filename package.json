@@ -1,0 +1,19 @@
+{
+	"name": "reaction",
+	"version": "1.0.0",
+	"description": "Facebook reactions for any occasion",
+	"main": "index.js",
+	"author": "Matt Gaikema",
+	"license": "MIT",
+	"devDependencies": {
+		"css-loader": "^0.15.5",
+		"file-loader": "^0.8.4",
+		"style-loader": "^0.12.3",
+		"ts-loader": "^2.0.3",
+		"url-loader": "^0.5.6"
+	},
+	"dependencies": {
+		"@types/bootstrap": "^3.3.32",
+		"bootstrap": "^3.3.7"
+	}
+}

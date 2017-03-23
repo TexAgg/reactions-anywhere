@@ -1,0 +1,11 @@
+html, body {
+  width: 200px;
+}
+
+.reaction-image {
+  width: 50%;
+}
+
+.reaction-item:hover {
+  background-color: #CFF2F2;
+}

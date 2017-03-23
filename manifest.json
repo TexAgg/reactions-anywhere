@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "reaction",
+  	"version": "1.0",
+	"permissions": [
+    	"activeTab",
+		"downloads"
+  	],
+	"browser_action": {
+		"default_title": "Reaction",
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources": [
+		"img/angry.png",
+		"img/haha.png",
+		"img/like.png",
+		"img/love.png",
+		"img/sad.png",
+		"img/wow.png"
+	]
+}
