@@ -79,7 +79,13 @@ export namespace Reaction
 		Ignore any warnings from editors and transpilers complaining that
 		they don't know what it is.
 		*/
-		browser.downloads.download({url: img.src});
+		// Check to see if the "browser" namespace is defined.
+		if (typeof browser != "undefined")
+			browser.downloads.download({url: img.src});
+		else 
+			chrome.downloads.download({url: img.src}, function() {
+				console.log("Downloaded via Google Chrome.");
+		});
 	}
 
 }

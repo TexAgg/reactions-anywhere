@@ -4,6 +4,8 @@ dist/
 
 web-ext-artifacts/
 .web-extension-id
+*.pem
+*.crs
 
 *.7z
 sign.sh
