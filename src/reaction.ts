@@ -1,6 +1,12 @@
 export namespace Reaction
 {
 
+	/**
+	 * Facebook reaction.
+	 * 
+	 * @export
+	 * @enum {number}
+	 */
 	export enum ReactionType 
 	{
 		Like,
@@ -9,12 +15,6 @@ export namespace Reaction
 		Sad,
 		Angry,
 		Haha
-	}
-
-	export enum Action
-	{
-		Copy,
-		Download
 	}
 
 	// http://stackoverflow.com/a/13631733/5415895
@@ -29,6 +29,9 @@ export namespace Reaction
 	}
 	*/
 
+	/**
+	 * Map a string to a ReactionType.
+	 */
 	export let reactionStrings: {[type: string]: ReactionType} = {
 		"like": ReactionType.Like,
 		"love": ReactionType.Love,
@@ -38,11 +41,16 @@ export namespace Reaction
 		"haha": ReactionType.Haha
 	};
 
-	export function getReaction(type: ReactionType, action: Action)
+	/**
+	 * Downloads a reaction image based on the given ReactionType.
+	 * 
+	 * @export
+	 * @param {ReactionType} type 
+	* */
+	export function getReaction(type: ReactionType): void
 	{
 		// Do thing with reaction.
 		let img = new Image();
-		let file;
 
 		switch (type)
 		{
@@ -65,28 +73,13 @@ export namespace Reaction
 				img.src = "img/haha.png";
 				break;
 		}
-
-		// This sucks.
-		if (action == Action.Copy)
-		{
-			document.body.appendChild(img);
-			let range = document.createRange();
-			range.setStartBefore(img);
-			range.setEndAfter(img);
-			range.selectNode(img);
-			window.getSelection().addRange(range);
-			var successful = document.execCommand('copy');
-			window.getSelection().removeAllRanges();
-			document.body.removeChild(img);
-		}
-		else
-		{
-			browser.downloads.download({url: img.src});
-			console.log("Downloading");
-		}
-
-
-		console.log("downloading " + img.src);
+		
+		/*
+		The browser API is only available for addons and extensions.
+		Ignore any warnings from editors and transpilers complaining that
+		they don't know what it is.
+		*/
+		browser.downloads.download({url: img.src});
 	}
 
 }
