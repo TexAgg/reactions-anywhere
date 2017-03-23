@@ -61,7 +61,7 @@ export namespace Reaction
 				img.src = "img/love.png";
 				break;
 			case ReactionType.Wow:
-				img.src = "img/love.png";
+				img.src = "img/wow.png";
 				break;
 			case ReactionType.Sad:
 				img.src = "img/sad.png";
