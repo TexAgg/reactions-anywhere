@@ -1,17 +1,21 @@
 {
 	"manifest_version": 2,
-	"name": "reaction",
-  	"version": "1.1",
+	"name": "reactions-anywhere",
+	"version": "1.2",
 	"author": "Matt Gaikema",
 	"description": "Downloads a Facebook reaction for use anywhere.",
 	"homepage_url": "https://github.com/TexAgg/reactions-anywhere",
 	"permissions": [
-    	"activeTab",
+		"activeTab",
 		"downloads"
-  	],
+	],
+	"icons": {
+		"48": "img/logo-48.png"
+	},
 	"browser_action": {
 		"default_title": "Reaction",
-		"default_popup": "popup.html"
+		"default_popup": "popup.html",
+		"default_icon": "img/logo-32.png"
 	},
 	"web_accessible_resources": [
 		"img/angry.png",

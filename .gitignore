@@ -7,3 +7,5 @@ web-ext-artifacts/
 
 *.7z
 sign.sh
+
+*.odg*
