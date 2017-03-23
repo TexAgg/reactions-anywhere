@@ -1,3 +1,9 @@
 node_modules/
 lib/
 dist/
+
+web-ext-artifacts/
+.web-extension-id
+
+*.7z
+sign.sh
