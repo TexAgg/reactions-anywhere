@@ -13,6 +13,7 @@
 		"48": "img/icon-48.png"
 	},
 	"browser_action": {
+		"browser_style": true,
 		"default_title": "Reaction",
 		"default_popup": "popup.html",
 		"default_icon": "img/icon-32.png"

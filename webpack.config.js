@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
  
 module.exports = {
     entry: './src/main.ts',
@@ -16,7 +17,10 @@ module.exports = {
             },
 			{ 
 				test: /\.css$/, 
-				loader: 'style-loader!css-loader' 
+				loader: ExtractTextPlugin.extract({
+					fallback: "style-loader",
+					use: 'css-loader' 
+				})
 			},
 			{
 				 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
@@ -37,6 +41,7 @@ module.exports = {
         ]
     },
 	plugins: [
+		new ExtractTextPlugin('styles.css'),
 		new webpack.optimize.UglifyJsPlugin({minimize: true})
 	],
     resolve: {

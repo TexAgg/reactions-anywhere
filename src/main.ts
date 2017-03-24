@@ -1,3 +1,4 @@
+import '../main.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Reaction} from "./reaction";
 
