@@ -12,7 +12,7 @@ The `.crx` file can be found with the other [releases](https://github.com/TexAgg
 
 ### Firefox
 The `.xpi` file can be found with the other [releases](https://github.com/TexAgg/reactions-anywhere/releases).
-It has been submitted to [AMO](https://addons.mozilla.org/) for review.
+It has been submitted to [AMO](https://addons.mozilla.org/) for review and (if approved) will be available [here](https://addons.mozilla.org/en-US/firefox/addon/reactions-anywhere/).
 
 ---
 
