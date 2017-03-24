@@ -1,13 +1,17 @@
 node_modules/
 lib/
 dist/
+# Used to generate the images.
+icons.js
 
 web-ext-artifacts/
 .web-extension-id
 *.pem
 *.crs
 
+# secret stuff
 *.7z
 sign.sh
 
+# Icon design: https://www.dropbox.com/s/b3xghun3pi5m6h1/icon.odg?dl=0
 *.odg*
