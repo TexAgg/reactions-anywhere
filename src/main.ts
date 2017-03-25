@@ -7,11 +7,25 @@ let reactionItems = document.getElementsByClassName("reaction-item");
 // Add click-listener to each item.
 for (let i = 0; i < reactionItems.length; i++)
 {
-	reactionItems[i].addEventListener("click", function()
+	let item = <HTMLElement>reactionItems[i];
+	item.addEventListener("click", function()
 	{
 		let reaction = reactionItems[i].getElementsByTagName("img")[0].getAttribute("reaction");
 		Reaction.getReaction(Reaction.reactionStrings[reaction]);
 	});
+
+	/*
+	item.onmouseover = function() 
+	{
+		let reaction = item.getElementsByTagName("img")[0];
+		reaction.style.width = "100%";
+	};
+	item.onmouseout = function()
+	{
+		let reaction = item.getElementsByTagName("img")[0];
+		reaction.style.width = "50%";
+	};
+	*/
 }
 
 if (BrowserUtils.isChromeDefined())

@@ -1,11 +1,16 @@
-html, body {
-  width: 100px;
-}
-
 .reaction-image {
-  width: 50%;
+  	width: 48px;
 }
 
-.reaction-item:hover {
-  background-color: #CFF2F2;
+.reaction-image:hover {
+	transform: scale(1.5);
+}
+
+.reaction-container {
+	margin: 2px;
+	margin-top: 5px;
+}
+
+.reaction-label {
+	text-align: center;
 }
