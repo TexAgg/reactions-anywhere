@@ -1,3 +1,5 @@
+import {BrowserUtils} from "./browserUtils";
+
 export namespace Reaction
 {
 
@@ -79,8 +81,7 @@ export namespace Reaction
 		Ignore any warnings from editors and transpilers complaining that
 		they don't know what it is.
 		*/
-		// Check to see if the "browser" namespace is defined.
-		if (typeof browser != "undefined")
+		if (BrowserUtils.isBrowserDefined())
 			browser.downloads.download({url: img.src});
 		else 
 			chrome.downloads.download({url: img.src}, function() {
