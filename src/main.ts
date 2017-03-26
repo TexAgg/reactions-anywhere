@@ -13,19 +13,6 @@ for (let i = 0; i < reactionItems.length; i++)
 		let reaction = reactionItems[i].getElementsByTagName("img")[0].getAttribute("reaction");
 		Reaction.getReaction(Reaction.reactionStrings[reaction]);
 	});
-
-	/*
-	item.onmouseover = function() 
-	{
-		let reaction = item.getElementsByTagName("img")[0];
-		reaction.style.width = "100%";
-	};
-	item.onmouseout = function()
-	{
-		let reaction = item.getElementsByTagName("img")[0];
-		reaction.style.width = "50%";
-	};
-	*/
 }
 
 if (BrowserUtils.isChromeDefined())
