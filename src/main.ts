@@ -15,6 +15,10 @@ for (let i = 0; i < reactionItems.length; i++)
 	});
 }
 
+/*
+	If this is Chrome, then add a hover-text telling the user they can
+	copy-paste the image.
+*/
 if (BrowserUtils.isChromeDefined())
 {
 	let reactionImgs = document.getElementsByClassName("reaction-image");

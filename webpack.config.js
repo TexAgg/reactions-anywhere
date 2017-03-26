@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
  
 module.exports = {
     entry: './src/main.ts',
@@ -19,7 +20,7 @@ module.exports = {
 				test: /\.css$/, 
 				loader: ExtractTextPlugin.extract({
 					fallback: "style-loader",
-					use: 'css-loader' 
+					use: 'css-loader'
 				})
 			},
 			{
@@ -42,7 +43,9 @@ module.exports = {
     },
 	plugins: [
 		new ExtractTextPlugin('styles.css'),
-		new webpack.optimize.UglifyJsPlugin({minimize: true})
+		new webpack.optimize.UglifyJsPlugin({minimize: true}),
+		// https://github.com/NMFR/optimize-css-assets-webpack-plugin
+		new OptimizeCssAssetsPlugin()
 	],
     resolve: {
         extensions: [".tsx", ".ts", ".js"]
