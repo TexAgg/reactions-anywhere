@@ -7,8 +7,12 @@
 	"homepage_url": "https://github.com/TexAgg/reactions-anywhere",
 	"permissions": [
 		"activeTab",
-		"downloads"
-	],
+		"downloads",
+		"storage"
+	],  
+	"options_ui": {
+    	"page": "options.html"
+  	},
 	"icons": {
 		"48": "img/icon-48.png"
 	},

@@ -4,9 +4,12 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
  
 module.exports = {
-    entry: './src/main.ts',
+    entry: {
+		bundle: './src/main.ts',
+		options: "./src/options.ts"
+	},
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {

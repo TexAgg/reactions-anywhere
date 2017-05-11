@@ -13,6 +13,7 @@ export namespace Reaction
 	{
 		Like,
 		Love,
+		Thankful,
 		Wow,
 		Sad,
 		Angry,
@@ -37,6 +38,7 @@ export namespace Reaction
 	export let reactionStrings: {[type: string]: ReactionType} = {
 		"like": ReactionType.Like,
 		"love": ReactionType.Love,
+		"thankful": ReactionType.Thankful,
 		"wow": ReactionType.Wow,
 		"sad": ReactionType.Sad,
 		"angry": ReactionType.Angry,
@@ -61,6 +63,9 @@ export namespace Reaction
 				break;
 			case ReactionType.Love:
 				img.src = "img/love.png";
+				break;
+			case ReactionType.Thankful:
+				img.src = "img/thankful.png";
 				break;
 			case ReactionType.Wow:
 				img.src = "img/wow.png";

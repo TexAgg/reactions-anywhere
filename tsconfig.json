@@ -8,6 +8,7 @@
     "files": [
         "src/reaction.ts",
         "src/main.ts",
-        "src/browserUtils.ts"
+        "src/browserUtils.ts",
+        "src/options.ts"
     ]
 }
