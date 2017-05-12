@@ -19,7 +19,7 @@ for (let i = 0; i < reactionItems.length; i++)
 	If this is Chrome, then add a hover-text telling the user they can
 	copy-paste the image.
 */
-if (BrowserUtils.isChromeDefined())
+if (!BrowserUtils.isBrowserDefined())
 {
 	let reactionImgs = document.getElementsByClassName("reaction-image");
 	for (let i = 0; i < reactionImgs.length; i++)
@@ -28,8 +28,16 @@ if (BrowserUtils.isChromeDefined())
 	}
 }
 
-let getting = BrowserUtils.isBrowserDefined ? browser.storage.local.get('thankful') : chrome.storage.local.get('thankful');
-getting.then(onGot);
+if (BrowserUtils.isBrowserDefined())
+{
+	let getting = browser.storage.local.get('thankful');
+	getting.then(onGot);
+}
+else
+{
+	// Use a callback: http://bit.ly/2qbolY7
+	chrome.storage.local.get("thankful", onGot);
+}
 
 function onGot(item)
 {

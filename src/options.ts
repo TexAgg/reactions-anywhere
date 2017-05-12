@@ -1,5 +1,6 @@
 // https://mzl.la/2r5Jdxt
 // http://stackoverflow.com/a/4471462/5415895
+// http://bit.ly/2qbolY7
 
 import {BrowserUtils} from "./browserUtils";
 
@@ -10,7 +11,7 @@ function saveOptions(e: Event): void
 	e.preventDefault();
 	
 	let elem: HTMLInputElement = <HTMLInputElement>document.querySelector("#thankful");
-	if (BrowserUtils.isBrowserDefined)
+	if (BrowserUtils.isBrowserDefined())
 	{
 		browser.storage.local.set(
 		{
@@ -19,13 +20,12 @@ function saveOptions(e: Event): void
 	}
 	else
 	{
+		// Use a callback.
 		chrome.storage.local.set(
 		{
-			thankful: elem.checked
+			"thankful": elem.checked
 		});
 	}
-
-	console.log('boi');
 }
 
 function restoreOptions(): void
@@ -41,8 +41,16 @@ function restoreOptions(): void
 		console.log('Error: ${error}');
 	}
 
-	let getting = BrowserUtils.isBrowserDefined ? browser.storage.local.get('thankful') : chrome.storage.local.get('thankful');
-	getting.then(setCurrentChoice, onError);
+	if (BrowserUtils.isBrowserDefined())
+	{
+		let getting = browser.storage.local.get('thankful');
+		getting.then(setCurrentChoice, onError);
+	}
+	else
+	{
+		// Use a callback.
+		chrome.storage.local.get('thankful', setCurrentChoice);
+	}
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
