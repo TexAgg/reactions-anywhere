@@ -1,5 +1,5 @@
-import '../main.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import '../main.css';
 import {Reaction} from "./reaction";
 import {BrowserUtils} from "./browserUtils";
 
@@ -25,5 +25,16 @@ if (BrowserUtils.isChromeDefined())
 	for (let i = 0; i < reactionImgs.length; i++)
 	{
 		reactionImgs[i].setAttribute("title", "Right-click and copy the image to paste it in another window!");
+	}
+}
+
+let getting = browser.storage.local.get('thankful');
+getting.then(onGot);
+
+function onGot(item)
+{
+	if (item.thankful)
+	{
+		document.getElementById("thankful").style.display = "none";
 	}
 }
