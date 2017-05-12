@@ -33,7 +33,7 @@ getting.then(onGot);
 
 function onGot(item)
 {
-	if (item.thankful)
+	if (!item.thankful)
 	{
 		document.getElementById("thankful").style.display = "none";
 	}

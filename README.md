@@ -7,12 +7,12 @@ Simply install the addon for Firefox and click on its icon to download a Faceboo
 ## Download
 
 ### Chrome
-Reactions-anywhere is on the Chrome Web Store [here](https://chrome.google.com/webstore/detail/reactions-anywhere/kocbaaabmlkopnnhdjjplknabiddmjdl).
-The `.crx` file can be found with the other [releases](https://github.com/TexAgg/reactions-anywhere/releases).
+Reactions-anywhere is on the Chrome Web Store [here](http://bit.ly/2q8I2Q4).
+The `.crx` file can be found with the other [releases](http://bit.ly/2pEEYJ1).
 
 ### Firefox
-The `.xpi` file can be found with the other [releases](https://github.com/TexAgg/reactions-anywhere/releases).
-It has been submitted to [AMO](https://addons.mozilla.org/) for review and (if approved) will be available [here](https://addons.mozilla.org/en-US/firefox/addon/reactions-anywhere/).
+The `.xpi` file can be found with the other [releases](http://bit.ly/2pEEYJ1).
+It has been submitted to [AMO](https://mzl.la/2pqvGEt) for review and (if approved) will be available [here](https://mzl.la/2pEaAyw).
 
 ---
 
