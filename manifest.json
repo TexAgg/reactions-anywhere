@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "reactions-anywhere",
-	"version": "2.0.1",
+	"version": "3.0.0",
 	"author": "Matt Gaikema",
 	"description": "Use Facebook reactions anywhere.",
 	"homepage_url": "https://github.com/TexAgg/reactions-anywhere",
