@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "reactions-anywhere",
-	"version": "3.0.0",
+	"version": "3.0.5",
 	"author": "Matt Gaikema",
 	"description": "Use Facebook reactions anywhere.",
 	"homepage_url": "https://github.com/TexAgg/reactions-anywhere",
@@ -29,5 +29,10 @@
 		"img/love.png",
 		"img/sad.png",
 		"img/wow.png"
-	]
+	],
+	"applications": {
+		"gecko": {
+			"id": "reactions-anywhere@mozilla"
+		}
+	}
 }
