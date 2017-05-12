@@ -28,7 +28,7 @@ if (BrowserUtils.isChromeDefined())
 	}
 }
 
-let getting = browser.storage.local.get('thankful');
+let getting = BrowserUtils.isBrowserDefined ? browser.storage.local.get('thankful') : chrome.storage.local.get('thankful');
 getting.then(onGot);
 
 function onGot(item)

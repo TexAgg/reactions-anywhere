@@ -1,4 +1,5 @@
 node_modules/
+.vscode/
 lib/
 dist/
 # Used to generate the images.

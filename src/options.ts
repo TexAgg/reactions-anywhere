@@ -10,10 +10,20 @@ function saveOptions(e: Event): void
 	e.preventDefault();
 	
 	let elem: HTMLInputElement = <HTMLInputElement>document.querySelector("#thankful");
-	browser.storage.local.set(
+	if (BrowserUtils.isBrowserDefined)
 	{
-		thankful: elem.checked
-	});
+		browser.storage.local.set(
+		{
+			thankful: elem.checked
+		});
+	}
+	else
+	{
+		chrome.storage.local.set(
+		{
+			thankful: elem.checked
+		});
+	}
 
 	console.log('boi');
 }
@@ -31,7 +41,7 @@ function restoreOptions(): void
 		console.log('Error: ${error}');
 	}
 
-	let getting = browser.storage.local.get('thankful');
+	let getting = BrowserUtils.isBrowserDefined ? browser.storage.local.get('thankful') : chrome.storage.local.get('thankful');
 	getting.then(setCurrentChoice, onError);
 }
 
